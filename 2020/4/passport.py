@@ -25,3 +25,12 @@ for password in pass_arr:
     if len(split) == 8:
         valid_count += 1
         continue
+    else if len(split) == 7:
+        isValid = True
+        for entry in split:
+            field = entry.split(':')
+            if entry[0] == 'cid':
+                isValid = False
+        if isValid:
+            valid_count += 1
+            
